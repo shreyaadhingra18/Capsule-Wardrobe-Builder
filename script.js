@@ -68,7 +68,14 @@ function suggestOutfit(temperature) {
 
     return outfit;
 }
-  
+function displaySuggestedOutfit(outfit) {
+    const outfitContainer = document.getElementById('suggested-outfit');
+    outfitContainer.innerHTML = outfit.map(item => `
+        <div class="item-card" style="background:${item.color}">
+            ${item.name}
+        </div>
+    `).join('');
+}
 
 async function getWeather() {
   navigator.geolocation.getCurrentPosition(async (pos) => {
@@ -81,6 +88,13 @@ async function getWeather() {
   }, () => {
     document.getElementById('weather-text').textContent = 'Could not get weather.';
   });
+  const temp = data.current.temperature_2m;
+
+document.getElementById("weather-text").textContent =
+    `${Math.round(temp)}°F right now`;
+
+const outfit = suggestOutfit(temp);
+displaySuggestedOutfit(outfit);
 }
 
 renderWardrobe();
