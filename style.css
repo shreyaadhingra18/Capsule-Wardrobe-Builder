@@ -1,0 +1,56 @@
+body {
+  font-family: sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f7f3ec;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#weather-box {
+  background: #222;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+input, select, button {
+  padding: 8px;
+  font-size: 14px;
+}
+
+#wardrobe-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.item-card {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 11px;
+  padding-top: 4px;
+  color: white;
+}
