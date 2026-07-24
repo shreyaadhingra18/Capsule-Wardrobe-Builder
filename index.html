@@ -20,35 +20,35 @@
   <section>
     <h2>Add an item</h2>
     <form id="item-form">
-      <input type="text" id="item-name" placeholder="e.g. Blue jacket" required>
-      <select id="item-category">
-        <option value="top">Tops</option>
-        <option value="shirt">Shirts</option>
-        <option value="t-shirt">T-shirts</option>
-        <option value="sweater">Sweaters</option>
-        <option value="hoodies">Hoodies</option>
-        <option value="jeans">Jeans</option>
-        <option value="dresses">Dresses</option>
-        <option value="outerwear">Outerwear</option>
-        <option value="shoes">Shoes</option>
-        <option value="heels">Heels </option>
-      </select>
-      <input type="color" id="item-color" value="#8899aa">
-      <select id="item-warmth">
-        <option value="light">Light ☀️</option>
-        <option value="medium">Medium 🌤️</option>
-        <option value="heavy">Heavy ❄️</option>
-      </select>
-      <input type="file" id="item-image" accept="image/*">
-      <button type="submit">Add</button>
+        <div class="form-group">
+            <input type="text" id="item-name" placeholder="e.g. Blue jacket" required>
+            <select id="item-category">
+                <option value="top">Tops</option>
+                <option value="shirt">Shirts</option>
+                <option value="t-shirt">T-shirts</option>
+                <option value="sweater">Sweaters</option>
+                <option value="hoodies">Hoodies</option>
+                <option value="jeans">Jeans</option>
+                <option value="dresses">Dresses</option>
+                <option value="outerwear">Outerwear</option>
+                <option value="shoes">Shoes</option>
+                <option value="heels">Heels </option>
+            </select>
+            <input type="color" id="item-color" value="#8899aa">
+            <select id="item-warmth">
+                <option value="light">Light ☀️</option>
+                <option value="medium">Medium 🌤️</option>
+                <option value="heavy">Heavy ❄️</option>
+            </select>
+            <input type="file" id="item-image" accept="image/*">
+            <button type="submit">Add</button>
+        </div>
     </form>
-  </section>
-
-  <section>
+</section>
+<section>
     <h2>Your wardrobe</h2>
     <div id="wardrobe-grid"></div>
   </section>
-
   <script src="script.js"></script>
 </body>
 </html>
