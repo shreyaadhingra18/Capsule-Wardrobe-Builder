@@ -3,9 +3,26 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background: #f7f3ec;
+  background: url('images/Image.png') repeat;
 }
+.title{
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+  margin-top: 0;
+  font-family:'Courier New', Courier, monospace;
+}
+.subtitle {
+  text-align: left;
+  font-size: 18px;
+  color: rgba(220, 181, 73, 0.926);
+  margin-bottom: 20px;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bolder;
 
+}
 header {
   text-align: center;
   margin-bottom: 20px;
@@ -60,10 +77,36 @@ input, select, button {
   flex-wrap: wrap;
   margin-top: 10px;
 }
-ul{
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  gap: 10px;
-  background-color:rgb(37, 36, 36);
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 100vh;
+    background: rgb(37, 36, 36);
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.navbar li a:hover {
+    background: #111;
 }
