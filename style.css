@@ -1,9 +1,14 @@
 body {
   font-family: sans-serif;
-  max-width: 600px;
-  margin: 0 auto;
+  margin: 0;
   padding: 20px;
-  background: url('images/Image.png') repeat;
+  padding-left: 150px;   
+  background: url('images/Image.png') no-repeat center center fixed;
+  background-size: cover;
+}
+.main{
+  margin-left: 0px;
+  text-align:left;
 }
 .title{
   text-align: left;
@@ -24,17 +29,18 @@ body {
 
 }
 header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
 }
 
 #weather-box {
   background: #222;
   color: white;
-  padding: 16px;
+  padding: 40px;
+  margin-left: 30rem;
+  margin-right: 25rem;
   border-radius: 8px;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 section {
