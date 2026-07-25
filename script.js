@@ -6,14 +6,36 @@ function saveWardrobe() {
 
 function renderWardrobe() {
   const grid = document.getElementById('wardrobe-grid');
-  grid.innerHTML = wardrobe.map(item => `
+
+  grid.innerHTML = wardrobe.map((item, index) => `
     <div class="item-card" style="background:${item.color}">
-      ${item.name}
+      <h4>${item.name}</h4>
+      <p>${item.category}</p>
+
+      <button onclick="editItem(${index})">Edit</button>
+      <button onclick="deleteItem(${index})">Delete</button>
     </div>
   `).join('');
 }
+function deleteItem(index) {
+    wardrobe.splice(index, 1);   // Remove one item
 
+    saveWardrobe();
+   
+   function editItem(index) {
 
+    const item = wardrobe[index];
+
+    const newName = prompt("Enter new name:", item.name);
+
+    if (newName) {
+        item.name = newName;
+    }
+
+    saveWardrobe();
+    renderWardrobe();
+} renderWardrobe();
+}
 document.getElementById('item-form').addEventListener('submit', function (e) {
   e.preventDefault();
   const name = document.getElementById('item-name').value;
@@ -66,7 +88,18 @@ function suggestOutfit(temperature) {
         outfit.push(jacket);
     }
 
+    const outfitMessage = document.getElementById('outfit-message');
+    if(temperature>=70){
+        outfitMessage.textContent = "It's warm outside! You can wear light clothes.";
+    }
+    else if(temperature>=50 && temperature<70){
+        outfitMessage.textContent = "It's a bit chilly! Consider wearing medium-weight clothes.";
+    }
+    else{
+        outfitMessage.textContent = "It's cold outside! Make sure to wear warm layers.";
+    }
     return outfit;
+
 }
 function displaySuggestedOutfit(outfit) {
     const outfitContainer = document.getElementById('suggested-outfit');

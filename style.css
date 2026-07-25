@@ -54,3 +54,16 @@ input, select, button {
   padding-top: 4px;
   color: white;
 }
+#suggested-outfit {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  background-color:rgb(37, 36, 36);
+}
