@@ -21,7 +21,7 @@ body {
 }
 .subtitle {
   text-align: left;
-  font-size: 18px;
+  font-size: 20px;
   color: rgba(220, 181, 73, 0.926);
   margin-bottom: 20px;
   font-family:'Times New Roman', Times, serif;
@@ -34,6 +34,7 @@ header {
 }
 
 #weather-box {
+  margin-top: 20px;
   background: #222;
   color: white;
   padding: 40px;

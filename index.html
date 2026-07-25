@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capsule Wardrobe</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <header>
@@ -21,10 +22,18 @@
   <section class="navbar">
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="wardrobe.html">Wardrobe</a></li>
-        <li><a href="outfit.html">Outfits</a></li>
-        <li><a href="settings.html">Settings</a></li>
+        <li><a href="index.html">
+          <i data-lucide="home"></i>
+          Home</a></li>
+        <li><a href="wardrobe.html">
+          <i data-lucide="shirt"></i>
+          Wardrobe</a></li>
+        <li><a href="outfit.html">
+          <i data-lucide="sparkles"></i>
+          Outfits</a></li>
+        <li><a href="settings.html">
+          <i data-lucide="settings"></i>
+          Settings</a></li>
       </ul>
     </nav>
   </section>
@@ -67,5 +76,8 @@
     <div id="outfit-message"></div>
   </section>
   <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
