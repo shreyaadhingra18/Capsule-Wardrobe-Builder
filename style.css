@@ -1,5 +1,7 @@
 body {
   font-family: sans-serif;
+  color: white;
+
   margin: 0;
   padding: 20px;
   padding-left: 150px;   
@@ -33,20 +35,28 @@ header {
   margin-bottom: 20px;
 }
 
-#weather-box {
-  margin-top: 20px;
-  background: #222;
-  color: white;
-  padding: 40px;
-  margin-left: 30rem;
-  margin-right: 25rem;
-  border-radius: 8px;
-  text-align: center;
+#weather-box{
+    width:85%;
+    min-height:220px;
+    padding: 25px;
+    display:flex;
+    align-items:center;
+    border-radius:20px;
 }
 
+#weather-box,
+.add-item,
+.wardrobe,
+.today-outfit,
+.overview,
+.recent-items{
+    background:#222;
+    border-radius:20px;
+    padding:30px;
+}
 section {
-  background: white;
-  border: 1px solid #ddd;
+  background: rgba(30, 30, 30, 0.697);
+  border: 1px solid #302f2fd5;
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 20px;
@@ -64,6 +74,8 @@ input, select, button {
 }
 
 #wardrobe-grid {
+  background: rgba(32,32,32,0.9);
+
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -76,7 +88,7 @@ input, select, button {
   text-align: center;
   font-size: 11px;
   padding-top: 4px;
-  color: white;
+  color: rgba(42, 42, 42, 0.8);
 }
 #suggested-outfit {
   display: flex;
@@ -88,11 +100,12 @@ input, select, button {
     position: fixed;
     top: 0;
     left: 0;
-    width: 90px;
+    width: 120px;
     height: 100vh;
     background: rgb(37, 36, 36);
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-top: 30px;
 }
 
@@ -104,16 +117,49 @@ input, select, button {
     flex-direction: column;
     gap: 10px;
 }
-
-.navbar li a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 15px 25px;
-    text-align: left;
-    transition: 0.3s;
+.navbar li a{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:18px 0;
+    color:white;
 }
 
 .navbar li a:hover {
     background: #111;
+}
+.dashboard{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+
+    margin-left:20px;
+}
+.left-column{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+.right-column{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+.add-item,
+.wardrobe,
+.today-outfit,
+.overview,
+.recent,
+#weather-box{
+    background:#202020;
+    border-radius:20px;
+    padding:25px;
+}
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
+    margin-top:20px;
 }
