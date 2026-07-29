@@ -134,3 +134,41 @@
     border-radius:50%;
     border:2px solid #555;
 }
+.page-header{
+    margin-bottom:30px;
+}
+
+.controls{
+    display:flex;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.controls input{
+    flex:1;
+    padding:14px 18px;
+    background:#2b2b2b;
+    border:none;
+    border-radius:12px;
+    color:white;
+    font-size:15px;
+}
+
+.controls select{
+    padding:14px 18px;
+    background:#2b2b2b;
+    color:white;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.wardrobe{
+    width:100%;
+}
+
+#wardrobe-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:25px;
+}

@@ -1,42 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wardrobe</title>
+
+    <title>Capsule Wardrobe | Wardrobe</title>
+    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="wardrobe.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script src="wardrobe.js" defer></script>
 </head>
+
 <body>
-    <header>
-    <h1 class="title">YOUR WARDROBE</h1>
-    <p class="subtitle">Browse and manage all your clothing.</p>
-</header>
+    
+<aside class="navbar">
+    <div class="logo-icon">
+        <i data-lucide="hanger"></i>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i data-lucide="house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="wardrobe.html">
+                    <i data-lucide="shirt"></i>
+                    <span>Wardrobe</span>
+                </a>
+            </li>
 
-<div class="controls">
-    <input
-        type="text"
-        id="search"
-        placeholder="Search..."
-        onkeyup="searchItems()">
+            <li>
+                <a href="outfit.html">
+                    <i data-lucide="sparkles"></i>
+                    <span>Outfits</span>
+                </a>
+            </li>
 
-    <select
-        id="category-filter"
-        onchange="filterCategory()">
+            <li>
+                <a href="settings.html">
+                    <i data-lucide="settings"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</aside>
 
-        <option value="all">All</option>
-        <option value="top">Top</option>
-        <option value="shirt">Shirt</option>
-        <option value="t-shirt">T-Shirt</option>
-        <option value="hoodie">Hoodie</option>
-        <option value="jeans">Jeans</option>
-        <option value="outerwear">Outerwear</option>
-        <option value="shoes">Shoes</option>
-    </select>
-</div>
+        <main class="main-content">
 
-<section class="wardrobe">
-    <div id="wardrobe-grid"></div>
-</section>
+            <header class="page-header">
+
+                <div>
+
+                    <h1>Your Wardrobe</h1>
+
+                    <p>
+                        Browse, search and manage every clothing item.
+                    </p>
+
+                </div>
+
+            </header>
+            <section class="controls">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search clothing..."
+                    onkeyup="searchItems()">
+
+                <select
+                    id="category-filter"
+                    onchange="filterCategory()">
+
+                    <option value="all">All Categories</option>
+                    <option value="top">Top</option>
+                    <option value="shirt">Shirt</option>
+                    <option value="t-shirt">T-Shirt</option>
+                    <option value="hoodie">Hoodie</option>
+                    <option value="jeans">Jeans</option>
+                    <option value="trousers">Trousers</option>
+                    <option value="shorts">Shorts</option>
+                    <option value="outerwear">Outerwear</option>
+                    <option value="shoes">Shoes</option>
+
+                </select>
+
+            </section>
+            <section class="wardrobe">
+
+                <div id="wardrobe-grid"></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
 </body>
+
 </html>
