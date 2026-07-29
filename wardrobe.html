@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wardrobe</title>
+    <link rel="stylesheet" href="wardrobe.css">
+    <script src="wardrobe.js" defer></script>
+</head>
+<body>
+    <header>
+    <h1 class="title">YOUR WARDROBE</h1>
+    <p class="subtitle">Browse and manage all your clothing.</p>
+</header>
+
+<div class="controls">
+    <input
+        type="text"
+        id="search"
+        placeholder="Search..."
+        onkeyup="searchItems()">
+
+    <select
+        id="category-filter"
+        onchange="filterCategory()">
+
+        <option value="all">All</option>
+        <option value="top">Top</option>
+        <option value="shirt">Shirt</option>
+        <option value="t-shirt">T-Shirt</option>
+        <option value="hoodie">Hoodie</option>
+        <option value="jeans">Jeans</option>
+        <option value="outerwear">Outerwear</option>
+        <option value="shoes">Shoes</option>
+    </select>
+</div>
+
+<section class="wardrobe">
+    <div id="wardrobe-grid"></div>
+</section>
+</body>
+</html>
