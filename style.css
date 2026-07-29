@@ -96,6 +96,19 @@ input, select, button {
   flex-wrap: wrap;
   margin-top: 10px;
 }
+.outfit-card{
+    width:80px;
+}
+.outfit-placeholder,
+.outfit-image{
+    width:42px;
+    height:188px;
+    border-radius:14px;
+    display:block;
+}
+.outfit-image{
+    object-fit:cover;
+}
 .navbar {
     position: fixed;
     top: 0;
@@ -154,7 +167,6 @@ input, select, button {
     border-radius:20px;
     padding:25px;
 }
-.today-outfit,
 .overview,
 .recent
 {
@@ -162,6 +174,12 @@ input, select, button {
     border-radius:20px;
     padding:25px;
     color:black
+}
+.today-outfit{
+    background: rgba(255, 255, 255, 0.701);
+    border-radius:20px;
+    padding:25px;
+    color:black;
 }
 .stats{
     display:grid;
@@ -171,13 +189,18 @@ input, select, button {
 }
 .item-card{
     background:#2b2b2b;
-    border-radius:16px;
-    padding:15px;
     width:180px;
-    text-align:center;
+    min-height:300px;
+
+    border-radius:18px;
+    padding:15px;
+
     display:flex;
     flex-direction:column;
+    justify-content:space-between;
     align-items:center;
+
+    color:white;
 }
 
 .wardrobe-image{
@@ -195,11 +218,16 @@ input, select, button {
 }
 
 .card-buttons{
+    width:100%;
     display:flex;
     justify-content:space-between;
-    margin-top:10px;
+    gap:10px;
+    margin-top:auto;
 }
-
+.edit-btn,
+.delete-btn{
+    flex:1;
+}
 .card-buttons button{
     border:none;
     padding:8px 12px;

@@ -3,6 +3,7 @@ let wardrobe = JSON.parse(localStorage.getItem("wardrobe")) || [];
 const form = document.getElementById("item-form");
 const grid = document.getElementById("wardrobe-grid");
 const recentGrid = document.getElementById("recent-grid");
+const colorInput = document.getElementById("item-color");
 
 function saveWardrobe() {
     localStorage.setItem("wardrobe", JSON.stringify(wardrobe));
@@ -60,7 +61,8 @@ function renderWardrobe(){
         const card = document.createElement("div");
 
         card.className="item-card";
-        card.style.borderLeft = `8px solid ${item.color}`;
+        card.style.background = item.color;
+        card.style.boxShadow = `0 0 10px ${item.color}`;
         card.innerHTML=`
 
             ${item.image ?
@@ -70,10 +72,7 @@ function renderWardrobe(){
             }
 
             <h3>${item.name}</h3>
-
-            <p>${item.category}</p>
-
-            <small>${item.warmth}</small>
+            <div class="color-dot" style="background:${item.color}"></div>
             <div class="card-buttons">
             <button class="edit-btn" onclick="editItem(${index})">
             ✏️ Edit
@@ -137,7 +136,7 @@ form.addEventListener("submit",function(e){
 
             category:document.getElementById("item-category").value,
 
-            color:document.getElementById("item-color").value,
+            color:colorInput.value,
 
             warmth:document.getElementById("item-warmth").value,
 
@@ -186,93 +185,21 @@ function suggestOutfit(temp){
     let warmth;
 
     if(temp <= 10){
-
         warmth = "heavy";
-
-    }
-
-    else if(temp <= 20){
-
+    }else if(temp <= 20){
         warmth = "medium";
-
-    }
-
-    else{
-
+    }else{
         warmth = "light";
-
     }
 
-    const clothes = filterByWarmth(warmth);
+    const clothes = wardrobe.filter(item => item.warmth === warmth);
 
-    const outfit=[];
-
-    const top = getRandomItem(
-
-        clothes.filter(item=>
-
-            item.category==="top" ||
-
-            item.category==="shirt" ||
-
-            item.category==="t-shirt" ||
-
-            item.category==="hoodie"
-
-        )
-
-    );
-
-    const bottom = getRandomItem(
-
-        clothes.filter(item=>
-
-            item.category==="jeans"
-
-        )
-
-    );
-
-    const shoes = getRandomItem(
-
-        clothes.filter(item=>
-
-            item.category==="shoes"
-
-        )
-
-    );
-
-    const outerwear = getRandomItem(
-
-        clothes.filter(item=>
-
-            item.category==="outerwear"
-
-        )
-
-    );
-
-    if(top) outfit.push(top);
-
-    if(bottom) outfit.push(bottom);
-
-    if(temp<=15 && outerwear){
-
-        outfit.push(outerwear);
-
+    if(clothes.length === 0){
+        return [];
     }
 
-    if(shoes){
-
-        outfit.push(shoes);
-
-    }
-
-    return outfit;
-
+    return clothes;
 }
-
 function displaySuggestedOutfit(outfit){
 
     const container=document.getElementById("suggested-outfit");
@@ -300,7 +227,7 @@ function displaySuggestedOutfit(outfit){
 
                 :
 
-                `<div class="placeholder-image"></div>`
+                `<div class="outfit-placeholder" style="background:${item.color}"></div>`
             }
 
             <h4>${item.name}</h4>
