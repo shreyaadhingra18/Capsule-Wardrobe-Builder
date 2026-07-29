@@ -55,23 +55,38 @@
                     <span>Settings</span>
                 </a>
             </li>
+            <li></li>
+            <li></li>
+            <li></li>
+           <li></li>
+            <li></li>
+
+            <li> Stay stylish, every day! </li>
         </ul>
     </nav>
 </aside>
-
         <main class="main-content">
 
             <header class="page-header">
 
+
                 <div>
 
-                    <h1>Your Wardrobe</h1>
+                    <h1 class="title">Your Wardrobe</h1>
 
-                    <p>
+                    <p class="subtitle">
                         Browse, search and manage every clothing item.
                     </p>
-
+                    <input type="file" id="item-image" accept="image/*" style="display:none" onchange="handleFileSelect(event)">
+                    <button type="submit" Add Item</button>
                 </div>
+                <div class="top-bar">
+
+    <button class="add-item-btn" onclick="window.location.href='index.html'">
+        + Add Item
+    </button>
+
+</div>
 
             </header>
             <section class="controls">
@@ -100,20 +115,15 @@
                 </select>
 
             </section>
+            
             <section class="wardrobe">
-
                 <div id="wardrobe-grid"></div>
 
             </section>
-
         </main>
-
     </div>
-
     <script>
         lucide.createIcons();
     </script>
-
 </body>
-
 </html>
