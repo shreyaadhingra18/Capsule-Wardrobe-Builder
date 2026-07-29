@@ -149,13 +149,19 @@ input, select, button {
 }
 .add-item,
 .wardrobe,
-.today-outfit,
-.overview,
-.recent,
 #weather-box{
     background:#202020;
     border-radius:20px;
     padding:25px;
+}
+.today-outfit,
+.overview,
+.recent
+{
+    background: rgba(255, 255, 255, 0.701);
+    border-radius:20px;
+    padding:25px;
+    color:black
 }
 .stats{
     display:grid;
@@ -169,6 +175,9 @@ input, select, button {
     padding:15px;
     width:180px;
     text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .wardrobe-image{
@@ -181,7 +190,7 @@ input, select, button {
 .placeholder-image{
     width:100%;
     height:150px;
-    background:#444;
+    background:#d9d9d9;
     border-radius:12px;
 }
 
@@ -197,10 +206,87 @@ input, select, button {
     border-radius:8px;
     cursor:pointer;
 }
-
-.recent-card{
+#item-form input,
+#item-form select{
     background:#2b2b2b;
-    border-radius:12px;
-    padding:12px;
-    margin-bottom:10px;
+    color:white;
+    border:1px solid #444;
+    border-radius:10px;
+    padding:10px 15px;
+    font-size:16px;
+}
+
+#item-form input::placeholder{
+    color:#bdbdbd;
+}
+input[type="file"]::file-selector-button{
+    background:#D4AF37;
+    color:black;
+    border:none;
+    border-radius:8px;
+    padding:8px 16px;
+    cursor:pointer;
+    margin-right:10px;
+}
+
+input[type="file"]::file-selector-button:hover{
+    background:#f1c94b;
+}
+.recent-card{
+    background:white;
+    color:black;
+    border-radius:15px;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.edit-btn{
+    background:#D4AF37;
+    color:black;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.edit-btn:hover{
+    background:#f1c94b;
+}
+
+.delete-btn{
+    background:#D9534F;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.delete-btn:hover{
+    background:#b52b27;
+}
+.card-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.card-buttons button{
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+.color-dot{
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    border:2px solid #555;
 }
