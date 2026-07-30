@@ -69,6 +69,18 @@ body {
   margin-left: 0px;
   text-align:left;
 }
+.tangerine-regular {
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tangerine-bold {
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .title{
   text-align: left;
   font-size: 24px;
