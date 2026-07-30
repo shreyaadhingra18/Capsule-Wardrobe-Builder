@@ -53,13 +53,20 @@ input[type="file"]::file-selector-button:hover{
     position: fixed;
     top: 0;
     left: 0;
-    width: 120px;
+    width: 132px;
     height: 100vh;
-    background: rgb(37, 36, 36);
+    background: linear-gradient(180deg, #0d0d0d, #171717);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
+    align-items: stretch;
+    padding: 14px 0;
+}
+
+.brand {
+    color: #f2b84b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    margin: 0 18px 28px;
 }
 
 .navbar ul {
@@ -72,16 +79,37 @@ input[type="file"]::file-selector-button:hover{
 }
 .navbar li a{
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     align-items:center;
-    justify-content:center;
-    gap:8px;
-    padding:18px 0;
+    justify-content:flex-start;
+    gap:12px;
+    padding:16px 20px;
     color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
 }
 
-.navbar li a:hover {
-    background: #111;
+.navbar li a:hover,
+.navbar li a.active {
+    background: #242424;
+    color: #d4af37;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 18px;
+    color: #bfbfbf;
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.sidebar-footer svg {
+    color: #d4af37;
+    width: 18px;
+    flex: 0 0 auto;
 }
 .dashboard{
     display:grid;

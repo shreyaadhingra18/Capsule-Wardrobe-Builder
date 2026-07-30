@@ -4,6 +4,18 @@ const form = document.getElementById("item-form");
 const grid = document.getElementById("wardrobe-grid");
 const recentGrid = document.getElementById("recent-grid");
 const colorInput = document.getElementById("item-color");
+const introScreen = document.getElementById("intro-screen");
+
+function hideIntroScreen() {
+    if (introScreen) {
+        introScreen.classList.add("hide");
+    }
+}
+
+if (introScreen) {
+    setTimeout(hideIntroScreen, 2200);
+    introScreen.addEventListener("click", hideIntroScreen);
+}
 
 function saveWardrobe() {
     localStorage.setItem("wardrobe", JSON.stringify(wardrobe));

@@ -4,9 +4,66 @@ body {
 
   margin: 0;
   padding: 20px;
-  padding-left: 150px;   
+  padding-left: 150px;
   background: url('images/Image.png') no-repeat center center fixed;
   background-size: cover;
+}
+
+.intro-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.9)),
+        url('images/Image.png') center/cover;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.intro-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.intro-content {
+    text-align: center;
+    animation: introPop 0.8s ease both;
+}
+
+.intro-content svg {
+    width: 56px;
+    height: 56px;
+    color: #d4af37;
+    margin-bottom: 14px;
+}
+
+.intro-content h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 54px;
+    color: #f2b84b;
+}
+
+.intro-content p {
+    margin: 10px 0 0;
+    color: #f4f4f4;
+    font-size: 18px;
+}
+
+@keyframes introPop {
+    from {
+        opacity: 0;
+        transform: translateY(14px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 .main{
   margin-left: 0px;
@@ -113,13 +170,20 @@ input, select, button {
     position: fixed;
     top: 0;
     left: 0;
-    width: 120px;
+    width: 132px;
     height: 100vh;
-    background: rgb(37, 36, 36);
+    background: linear-gradient(180deg, #0d0d0d, #171717);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
+    align-items: stretch;
+    padding: 14px 0;
+}
+
+.brand {
+    color: #f2b84b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    margin: 0 18px 28px;
 }
 
 .navbar ul {
@@ -132,16 +196,37 @@ input, select, button {
 }
 .navbar li a{
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     align-items:center;
-    justify-content:center;
-    gap:8px;
-    padding:18px 0;
+    justify-content:flex-start;
+    gap:12px;
+    padding:16px 20px;
     color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
 }
 
-.navbar li a:hover {
-    background: #111;
+.navbar li a:hover,
+.navbar li a.active {
+    background: #242424;
+    color: #d4af37;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 18px;
+    color: #bfbfbf;
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.sidebar-footer svg {
+    color: #d4af37;
+    width: 18px;
+    flex: 0 0 auto;
 }
 .dashboard{
     display:grid;
@@ -317,4 +402,163 @@ input[type="file"]::file-selector-button:hover{
     height:22px;
     border-radius:50%;
     border:2px solid #555;
+}
+
+.index-page {
+    box-sizing: border-box;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.index-page * {
+    box-sizing: border-box;
+}
+
+.index-page .dashboard {
+    height: calc(100vh - 28px);
+    gap: 18px;
+    margin-left: 0;
+}
+
+.index-page .left-column,
+.index-page .right-column {
+    min-height: 0;
+    gap: 10px;
+}
+
+.index-page header {
+    margin-bottom: 6px;
+}
+
+.index-page .title {
+    font-size: 22px;
+}
+
+.index-page .subtitle {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.index-page #weather-box,
+.index-page .add-item,
+.index-page .wardrobe,
+.index-page .today-outfit,
+.index-page .overview,
+.index-page .recent-items {
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.index-page #weather-box {
+    width: auto;
+    min-height: 95px;
+}
+
+.index-page .add-item h2,
+.index-page .wardrobe h2,
+.index-page .today-outfit h2,
+.index-page .overview h2,
+.index-page .recent-items h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.index-page #item-form {
+    gap: 7px;
+}
+
+.index-page #item-form input,
+.index-page #item-form select,
+.index-page #item-form button {
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
+.index-page .wardrobe {
+    flex: 0 0 auto;
+    min-height: 0;
+    overflow: visible;
+}
+
+.index-page #wardrobe-grid {
+    max-height: none;
+    overflow: visible;
+    gap: 10px;
+}
+
+.index-page .item-card {
+    width: 122px;
+    min-height: 172px;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.index-page .wardrobe-image,
+.index-page .placeholder-image {
+    height: 78px;
+    border-radius: 9px;
+}
+
+.index-page .card-buttons {
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.index-page .card-buttons button {
+    padding: 7px 8px;
+    font-size: 12px;
+}
+
+.index-page .right-column {
+    overflow: hidden;
+}
+
+.index-page .today-outfit,
+.index-page .overview,
+.index-page .recent-items {
+    margin-bottom: 0;
+}
+
+.index-page .today-outfit {
+    min-height: 340px;
+}
+
+.index-page .stats {
+    margin-top: 8px;
+}
+
+.index-page .stats h2 {
+    margin: 0;
+}
+
+.index-page .stats p {
+    margin: 4px 0 0;
+}
+
+.index-page .recent-card {
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.index-page #suggested-outfit {
+    gap: 8px;
+    min-height: 190px;
+    align-items: flex-start;
+}
+
+.index-page .outfit-card {
+    width: 72px;
+    font-size: 12px;
+}
+
+.index-page .outfit-placeholder,
+.index-page .outfit-image {
+    width: 48px;
+    height: 80px;
+    border-radius: 10px;
 }

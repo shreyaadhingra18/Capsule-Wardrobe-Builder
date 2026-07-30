@@ -8,15 +8,21 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-<aside class="navbar">
-    <div class="logo-icon">
+<body class="index-page">
+<div class="intro-screen" id="intro-screen">
+    <div class="intro-content">
         <i data-lucide="hanger"></i>
+        <h1>Capsule</h1>
+        <p>Your wardrobe, styled for today.</p>
     </div>
+</div>
+
+<aside class="navbar">
+    <h2 class="brand">Capsule</h2>
     <nav>
         <ul>
             <li>
-                <a href="index.html">
+                <a href="index.html" class="active">
                     <i data-lucide="house"></i>
                     <span>Home</span>
                 </a>
@@ -35,14 +41,12 @@
                 </a>
             </li>
 
-            <li>
-                <a href="settings.html">
-                    <i data-lucide="settings"></i>
-                    <span>Settings</span>
-                </a>
-            </li>
         </ul>
     </nav>
+    <div class="sidebar-footer">
+        <i data-lucide="sparkles"></i>
+        <span>Stay stylish,<br>every day!</span>
+    </div>
 </aside>
 <main class="dashboard">
     <div class="left-column">
