@@ -13,12 +13,16 @@ body{
 
 .navbar{
     width:132px;
-    flex-shrink:0;
+    position:fixed;
+    left:0;
+    top:0;
+    height:100vh;
 }
 
 .outfit-page{
-    flex:1;
-    padding:28px;
+    margin-left:132px;
+    width:calc(100% - 132px);
+    padding:30px;
 }
 
 .brand {

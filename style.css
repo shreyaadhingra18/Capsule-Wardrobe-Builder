@@ -17,7 +17,7 @@ body {
     align-items: center;
     justify-content: center;
     background:
-        linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.9)),
+        linear-gradient(rgba(249, 215, 48, 0.78), rgba(0, 0, 0, 0.9)),
         url('images/Image.png') center/cover;
     color: white;
     opacity: 1;
@@ -44,7 +44,7 @@ body {
 
 .intro-content h1 {
     margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Tangerine, cursive;
     font-size: 70px;
     color: #f2b84b;
 }
