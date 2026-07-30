@@ -3,22 +3,22 @@
     box-sizing: border-box;
 }
 
-body {
-    background: #050505;
-    padding: 18px 28px 28px 168px;
-    color: white;
+body{
+    display:flex;
+    background:#050505;
+    color:white;
+    margin:0;
+    padding:0;
 }
 
-.outfit-page {
-    margin-left: 0;
-    max-width: none;
+.navbar{
+    width:132px;
+    flex-shrink:0;
 }
 
-.navbar {
-    width: 132px;
-    background: linear-gradient(180deg, #0d0d0d, #171717);
-    align-items: stretch;
-    padding: 14px 0;
+.outfit-page{
+    flex:1;
+    padding:28px;
 }
 
 .brand {
@@ -326,13 +326,25 @@ body {
 .today-images .item-placeholder,
 .idea-card img,
 .idea-card .item-placeholder {
-    width: 72px;
-    height: 72px;
+    width: 92px;
+    height: 92px;
     object-fit: cover;
     border-radius: 10px;
     background: #444;
 }
+.outfit-images{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    margin-bottom:20px;
+}
 
+.outfit-images img,
+.outfit-images .item-placeholder{
+    width: 100px;
+    height:130px;
+    object-fit:contain;
+}
 .builder-actions {
     display: flex;
     justify-content: flex-end;
@@ -370,6 +382,20 @@ body {
     background: #232323;
 }
 
+.outfit-card .outfit-images {
+    min-height: 92px;
+    margin-bottom: 12px;
+}
+
+.outfit-card h3 {
+    font-size: 22px;
+}
+
+.outfit-card p {
+    font-size: 15px;
+    line-height: 1.35;
+}
+
 .today-info h3,
 .outfit-card h3 {
     margin: 0 0 6px;
@@ -397,8 +423,8 @@ body {
 }
 
 .outfit-grid {
-    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
-    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+    gap: 22px;
 }
 
 .outfit-grid.list-view {
@@ -416,13 +442,16 @@ body {
     grid-row: 1 / span 4;
 }
 
-.outfit-card {
-    position: relative;
-    padding: 14px;
-    min-height: 260px;
-    overflow: hidden;
+.outfit-card{
+    width:100%;
+    min-height: 220px;
+    max-width: 280px;
+    padding: 16px;
+    background:#242424;
+    border-radius:16px;
+    display:flex;
+    flex-direction:column;
 }
-
 .outfit-card:hover,
 .idea-card:hover,
 .picker-item:hover {
@@ -450,14 +479,14 @@ body {
 
 .card-buttons {
     display: flex;
-    gap: 8px;
+    gap: 12px;
     margin-top: 14px;
     justify-content: flex-start;
 }
 
 .card-buttons button {
     flex: 0 0 auto;
-    padding: 8px 16px;
+    padding: 9px 18px;
     border-radius: 9px;
     border: none;
     cursor: pointer;

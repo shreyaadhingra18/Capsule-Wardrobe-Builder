@@ -45,14 +45,14 @@ body {
 .intro-content h1 {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 54px;
+    font-size: 70px;
     color: #f2b84b;
 }
 
 .intro-content p {
     margin: 10px 0 0;
     color: #f4f4f4;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 @keyframes introPop {
