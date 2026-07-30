@@ -36,8 +36,8 @@ header {
 }
 
 #weather-box{
-    width:85%;
-    min-height:220px;
+    width:65%;
+    min-height:200px;
     padding: 25px;
     display:flex;
     align-items:center;
@@ -52,7 +52,7 @@ header {
 .recent-items{
     background:#222;
     border-radius:20px;
-    padding:30px;
+    padding:20px;
 }
 section {
   background: rgba(30, 30, 30, 0.697);
@@ -82,8 +82,8 @@ input, select, button {
 }
 
 .item-card {
-  width: 80px;
-  height: 80px;
+  width: 0px;
+  height: 50px;
   border-radius: 8px;
   text-align: center;
   font-size: 11px;

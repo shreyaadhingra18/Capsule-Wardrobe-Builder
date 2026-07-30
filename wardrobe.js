@@ -33,7 +33,7 @@ function renderWardrobe(items=wardrobe){
         const card=document.createElement("div");
 
         card.className="item-card";
-
+        card.style.background=item.color;
         card.style.boxShadow=`0 0 12px ${item.color}`;
 
         card.innerHTML=`
@@ -78,24 +78,16 @@ function searchItems(){
         wardrobe.filter(item=>
 
             item.name.toLowerCase().includes(value)
-
         )
-
     );
-
 }
-
 function filterCategory(){
-
     const category=document.getElementById("category-filter").value;
-
     if(category==="all"){
         renderWardrobe();
         return;
     }
-
     renderWardrobe(
-
         wardrobe.filter(item=>
 
             item.category===category

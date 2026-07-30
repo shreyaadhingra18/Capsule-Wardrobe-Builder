@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capsule Wardrobe | Outfits</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="outfit.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="outfits.js" defer></script>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div>
+
+            <h2 class="logo">Capsule</h2>
+
+            <nav>
+
+                <a href="index.html">
+                    <i data-lucide="home"></i>
+                    <span>Home</span>
+                </a>
+
+                <a href="wardrobe.html">
+                    <i data-lucide="shirt"></i>
+                    <span>Wardrobe</span>
+                </a>
+
+                <a href="outfits.html" class="active">
+                    <i data-lucide="sparkles"></i>
+                    <span>Outfits</span>
+                </a>
+
+                <a href="#">
+                    <i data-lucide="settings"></i>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+        </div>
+
+        <div class="sidebar-footer">
+            <i data-lucide="sparkles"></i>
+            <p>Stay stylish, every day!</p>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <div>
+
+                <h1>My Outfits</h1>
+
+                <p>
+                    Create, manage and plan your outfits.
+                </p>
+
+            </div>
+
+            <button class="create-outfit-btn">
+                <i data-lucide="plus"></i>
+                Create New Outfit
+            </button>
+
+        </header>
+
+        <!-- SEARCH & FILTER -->
+
+        <section class="controls">
+
+            <div class="tabs">
+
+                <button class="tab active">
+                    <i data-lucide="user"></i>
+                    All Outfits
+                </button>
+
+                <button class="tab">
+                    <i data-lucide="heart"></i>
+                    Favorites
+                </button>
+
+                <button class="tab">
+                    <i data-lucide="calendar"></i>
+                    Planned
+                </button>
+
+            </div>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search outfits...">
+
+                <i data-lucide="search"></i>
+
+            </div>
+
+        </section>
+
+        <!-- TODAY'S OUTFIT -->
+
+        <section class="today-outfit">
+
+            <h2>
+                <i data-lucide="sun"></i>
+                Today's Outfit
+            </h2>
+
+            <div class="today-card">
+
+                <div class="today-images">
+
+                    <img src="images/tshirt.png" alt="">
+                    <img src="images/jeans.png" alt="">
+                    <img src="images/jacket.png" alt="">
+                    <img src="images/shoes.png" alt="">
+
+                </div>
+
+                <div class="today-info">
+
+                    <h3>Casual Day Out</h3>
+
+                    <p>
+                        Simple, clean and comfortable.
+                    </p>
+
+                    <div class="outfit-meta">
+
+                        <span>
+                            <i data-lucide="calendar"></i>
+                            30 July 2026
+                        </span>
+
+                        <span>
+                            <i data-lucide="thermometer"></i>
+                            26°C
+                        </span>
+
+                    </div>
+
+                    <div class="today-buttons">
+
+                        <button class="wear-btn">
+                            Wear Today
+                        </button>
+
+                        <button class="edit-btn">
+                            Edit
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- ALL OUTFITS -->
+
+        <section class="all-outfits">
+
+            <div class="section-header">
+
+                <h2>All Outfits</h2>
+
+                <div class="sort-controls">
+
+                    <span>Sort By</span>
+
+                    <select id="sort">
+
+                        <option>Newest First</option>
+                        <option>Oldest First</option>
+                        <option>Favorites</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="outfit-grid" id="outfit-grid">
+
+                <!-- Outfit Card 1 -->
+
+                <div class="outfit-card">
+
+                    <div class="outfit-images">
+
+                        <img src="images/hoodie.png">
+                        <img src="images/pants.png">
+                        <img src="images/shoes.png">
+
+                    </div>
+
+                    <h3>All Black Fit</h3>
+
+                    <p>Minimal and always clean.</p>
+
+                    <div class="outfit-meta">
+
+                        <span>
+                            <i data-lucide="calendar"></i>
+                            28 Jul 2026
+                        </span>
+
+                        <span>
+                            <i data-lucide="thermometer"></i>
+                            28°C
+                        </span>
+
+                    </div>
+
+                    <div class="card-buttons">
+
+                        <button class="wear-btn">Wear</button>
+
+                        <button class="edit-btn">Edit</button>
+
+                        <button class="delete-btn">Delete</button>
+
+                    </div>
+
+                </div>
+
+                <!-- Outfit Card 2 -->
+
+                <div class="outfit-card">
+
+                    <div class="outfit-images">
+
+                        <img src="images/tshirt.png">
+                        <img src="images/jeans.png">
+                        <img src="images/shoes.png">
+
+                    </div>
+
+                    <h3>Everyday Casual</h3>
+
+                    <p>Perfect for everyday wear.</p>
+
+                    <div class="outfit-meta">
+
+                        <span>
+                            <i data-lucide="calendar"></i>
+                            27 Jul 2026
+                        </span>
+
+                        <span>
+                            <i data-lucide="thermometer"></i>
+                            31°C
+                        </span>
+
+                    </div>
+
+                    <div class="card-buttons">
+
+                        <button class="wear-btn">Wear</button>
+
+                        <button class="edit-btn">Edit</button>
+
+                        <button class="delete-btn">Delete</button>
+
+                    </div>
+
+                </div>
+
+                <!-- Outfit Card 3 -->
+
+                <div class="outfit-card">
+
+                    <div class="outfit-images">
+
+                        <img src="images/shirt.png">
+                        <img src="images/trousers.png">
+                        <img src="images/shoes.png">
+
+                    </div>
+
+                    <h3>Smart Casual</h3>
+
+                    <p>Balanced and effortless.</p>
+
+                    <div class="outfit-meta">
+                        <span>
+                            <i data-lucide="calendar"></i>
+                            24 Jul 2026
+                        </span>
+                        <span>
+                            <i data-lucide="thermometer"></i>
+                            29°C
+                        </span>
+                    </div>
+                    <div class="card-buttons">
+                        <button class="wear-btn">Wear</button>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </div>
+                <div class="outfit-card">
+
+                    <div class="outfit-images">
+
+                        <img src="images/hoodie2.png">
+                        <img src="images/cargo.png">
+                        <img src="images/sneakers.png">
+
+                    </div>
+
+                    <h3>Weekend Vibes</h3>
+
+                    <p>Relaxed and comfortable.</p>
+
+                    <div class="outfit-meta">
+
+                        <span>
+                            <i data-lucide="calendar"></i>
+                            22 Jul 2026
+                        </span>
+
+                        <span>
+                            <i data-lucide="thermometer"></i>
+                            30°C
+                        </span>
+
+                    </div>
+
+                    <div class="card-buttons">
+
+                        <button class="wear-btn">Wear</button>
+
+                        <button class="edit-btn">Edit</button>
+
+                        <button class="delete-btn">Delete</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="ideas-section">
+
+            <div class="section-header">
+
+                <h2>
+                    <i data-lucide="sparkles"></i>
+                    Outfit Ideas For You
+                </h2>
+
+                <a href="#">See More</a>
+
+            </div>
+
+            <div class="ideas-grid">
+
+                <div class="idea-card">
+                    <img src="images/tshirt.png">
+                    <img src="images/pants.png">
+                    <img src="images/shoes.png">
+                </div>
+
+                <div class="idea-card">
+                    <img src="images/shirt.png">
+                    <img src="images/jeans.png">
+                    <img src="images/shoes.png">
+                </div>
+
+                <div class="idea-card">
+                    <img src="images/hoodie.png">
+                    <img src="images/cargo.png">
+                    <img src="images/sneakers.png">
+                </div>
+
+                <div class="idea-card">
+                    <img src="images/polo.png">
+                    <img src="images/trousers.png">
+                    <img src="images/shoes.png">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>
